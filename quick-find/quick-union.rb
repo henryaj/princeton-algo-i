@@ -9,4 +9,16 @@ class QuickUnion
     end
   end
 
+  def root(i)
+    return i if i == data[i]
+    i = data[i]
+    root(i)
+  end
+
+  def union(a, b)
+    i = root(a)
+    j = root(b)
+    data[i] = j
+  end
+
 end
