@@ -19,4 +19,13 @@ RSpec.describe QuickFind do
       expect(qf.data[2]).to eq(10)
     end
   end
+
+  describe "#find" do
+    it "returns true if the elements are connected" do
+      qf = QuickFind.new(10)
+      qf.union(2, 10)
+
+      expect(qf.find(2, 10)).to be true
+    end
+  end
 end

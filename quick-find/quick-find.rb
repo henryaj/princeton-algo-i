@@ -10,11 +10,19 @@ class QuickFind
   end
 
   def union(a, b)
+    # requires the entire array to be traversed - takes quadratic time!
+
     data.each do |i|
       if i == a
         data[i] = b
       end
     end
+  end
+
+  def find(a, b)
+    # two array accesses - very fast
+
+    data[a] == data[b]
   end
 
 end
