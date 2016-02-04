@@ -11,4 +11,12 @@ RSpec.describe QuickFind do
     end
   end
 
+  describe "#union" do
+    it "connects two components" do
+      qf = QuickFind.new(10)
+      qf.union(2, 10)
+
+      expect(qf.data[2]).to eq(10)
+    end
+  end
 end

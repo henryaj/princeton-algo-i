@@ -9,4 +9,12 @@ class QuickFind
     end
   end
 
+  def union(a, b)
+    data.each do |i|
+      if i == a
+        data[i] = b
+      end
+    end
+  end
+
 end
